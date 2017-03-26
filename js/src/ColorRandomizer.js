@@ -7,6 +7,5 @@ export default function getRandomColor() {
     hex += chars[(Math.random() * 16) | 0];
   }
 
-  console.log(hex);
   return hex;
 }

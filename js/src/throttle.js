@@ -1,9 +1,11 @@
 export default function throttle(fn, threshold, scope) {
   threshold || (threshold = 250);
   var last,
-      deferTimer;
+      deferTimer,
+      $log = $('.js_throttle_log');
 
   return function () {
+    $log.html($log.html() + '<br>clicked');
     var context = scope || this;
 
     var now = +new Date,
@@ -16,6 +18,7 @@ export default function throttle(fn, threshold, scope) {
       }, threshold);
     } else {
       last = now;
+      $log.html($log.html() + '<br>color change');
       fn.apply(context, args);
     }
   };

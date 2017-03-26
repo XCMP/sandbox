@@ -2,20 +2,30 @@ body {
   font-family: "American Typewriter";
 }
 
+div.containers {
+  width: 100%;
+}
+
 div.container {
+  float: left;
   background-color: cornflowerblue;
   cursor: default;
   width: 20em;
   height: 20em;
-  padding: 2em 0;
-  margin-bottom: 5em;
-  margin: auto;
+  padding: 1em 0;
   text-align: center;
   user-select: none;
 }
 
-div.divider {
+div.container_log {
+  background-color: lightgray;
+  float: right;
   width: 20em;
+  height: 20em;
+  padding: 1em;
+}
+
+div.divider {
+  width: 100%;
   height: 2em;
-  margin: auto;
 }
