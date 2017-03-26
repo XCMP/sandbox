@@ -1,0 +1,21 @@
+body {
+  font-family: "American Typewriter";
+}
+
+div.container {
+  background-color: cornflowerblue;
+  cursor: default;
+  width: 20em;
+  height: 20em;
+  padding: 2em 0;
+  margin-bottom: 5em;
+  margin: auto;
+  text-align: center;
+  user-select: none;
+}
+
+div.divider {
+  width: 20em;
+  height: 2em;
+  margin: auto;
+}
