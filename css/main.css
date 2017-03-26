@@ -7,7 +7,7 @@ div.containers {
 }
 
 div.container {
-  float: left;
+  display: inline-block;
   background-color: cornflowerblue;
   cursor: default;
   width: 20em;
