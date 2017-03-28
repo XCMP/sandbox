@@ -5,8 +5,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: `./js/index.js`,
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: `main.js`
+    path: path.resolve(__dirname, 'dist'),
+    filename: `/js/main.js`
   },
   module: {
     loaders: [
@@ -21,7 +21,13 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: './node_modules/jquery/dist/jquery.min.js', to: './libs/jquery.min.js' }
+      { from: './node_modules/jquery/dist/jquery.min.js', to: './libs/jquery.min.js' },
+      { from: './css', to: './css' },
+      {
+        context: 'html',
+        from: '**/*',
+        to: './sandbox'
+      },
     ], {}),
     function() {
       this.plugin('done', function() {
