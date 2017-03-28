@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: `./js/index.js`,
@@ -6,11 +8,6 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: `main.js`
   },
-  // entry: './js/index.js',
-  // output: {
-  //   path: path.resolve(__dirname, 'build'),
-  //   filename: 'main.js'
-  // },
   module: {
     loaders: [
       {
@@ -23,6 +20,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new CopyWebpackPlugin([
+      { from: './node_modules/jquery/dist/jquery.min.js', to: './libs/jquery.min.js' }
+    ], {}),
     function() {
       this.plugin('done', function() {
         console.log(`\nBuild finished at ${new Date()}`);

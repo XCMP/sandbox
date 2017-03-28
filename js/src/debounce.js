@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import log from './logger'
 
 export default function debounce(func, threshold, immediate) {

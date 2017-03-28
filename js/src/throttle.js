@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import log from './logger'
 
 export default function throttle(fn, threshold, scope) {
