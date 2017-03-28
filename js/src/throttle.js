@@ -1,3 +1,5 @@
+import log from './logger'
+
 export default function throttle(fn, threshold, scope) {
   threshold || (threshold = 250);
   var last,
@@ -5,7 +7,7 @@ export default function throttle(fn, threshold, scope) {
       $log = $('.js_throttle_log');
 
   return function () {
-    $log.html($log.html() + '<br>clicked');
+    log($log, 'clicked');
     var context = scope || this;
 
     var now = +new Date,
@@ -18,7 +20,7 @@ export default function throttle(fn, threshold, scope) {
       }, threshold);
     } else {
       last = now;
-      $log.html($log.html() + '<br>color change');
+      log($log, 'color changed');
       fn.apply(context, args);
     }
   };

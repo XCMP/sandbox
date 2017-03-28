@@ -23,6 +23,7 @@ div.container_log {
   width: 20em;
   height: 20em;
   padding: 1em;
+  overflow: scroll;
 }
 
 div.divider {
