@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: `./js/index.js`,
+  entry: `./src/js/index.js`,
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: `/js/main.js`
@@ -21,10 +21,10 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: './node_modules/jquery/dist/jquery.min.js', to: './libs/jquery.min.js' },
-      { from: './css', to: './css' },
+      { from: './node_modules/jquery/dist/jquery.min.js', to: './js/libs/jquery.min.js' },
+      { from: './src/css', to: './css' },
       {
-        context: 'html',
+        context: 'src/html',
         from: '**/*',
         to: './sandbox'
       },
