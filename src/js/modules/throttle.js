@@ -17,6 +17,7 @@ export default function throttle(fn, threshold, scope) {
       clearTimeout(deferTimer);
       deferTimer = setTimeout(function () {
         last = now;
+        log($log, 'color changed');
         fn.apply(context, args);
       }, threshold);
     } else {
