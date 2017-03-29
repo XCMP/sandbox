@@ -1,14 +1,14 @@
 import $ from 'jquery'
-import log from './logger'
+import { log } from './logger'
 
 export default function debounce(func, threshold, immediate) {
 
-  var timeout,
-      $log = $('.js_debounce_log');
+  let timeout;
+  const $log = $('.js_debounce_log');
 
   return function debounced() {
     log($log, 'clicked');
-    var obj = this, args = arguments;
+    const obj = this, args = arguments;
 
     function delayed() {
       if (!immediate) {
