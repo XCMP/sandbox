@@ -1,0 +1,12 @@
+body {
+  font-family: "American Typewriter";
+}
+
+textarea {
+  font-family: "American Typewriter";
+  border: 3px solid;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-weight: bold; 
+}
