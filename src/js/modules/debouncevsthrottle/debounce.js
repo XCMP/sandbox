@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import { log } from './logger'
+import { log } from './utils/logger'
 
 export default function debounce(func, threshold, immediate) {
 

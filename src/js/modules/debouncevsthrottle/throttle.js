@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import { log } from './logger'
+import { log } from './utils/logger'
 
 export default function throttle(fn, threshold, scope) {
   threshold || (threshold = 250);

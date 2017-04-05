@@ -1,11 +1,9 @@
 import $ from 'jquery'
 
-import changeColor from './modules/changeColor'
-import debounce from './modules/debounce'
-import throttle from './modules/throttle'
-import { bindLogReset } from './modules/logger'
-
-import copy from './modules/copier'
+import changeColor from './color/changeColor'
+import debounce from './debounce'
+import throttle from './throttle'
+import { bindLogReset } from './utils/logger'
 
 const init = () => {
 
@@ -19,12 +17,6 @@ const init = () => {
       .on('click', throttle(changeColor, 1000))
       .on('dblclick', throttle(changeColor, 1000));
   bindLogReset($('.js_throttle_log'), 'THROTTLE log');
-
-  // type twice
-  copy({
-    source: $('.js_source'),
-    target: $('.js_target'),
-  });
 
 };
 

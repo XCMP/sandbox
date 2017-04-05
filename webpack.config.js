@@ -2,10 +2,13 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: `./src/js/index.js`,
+  entry: {
+    debouncevsthrottle: `./src/js/modules/debouncevsthrottle`,
+    typetwice: `./src/js/modules/typetwice`,
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: `/js/bundle.js`
+    filename: `/js/[name].js`
   },
   module: {
     loaders: [
