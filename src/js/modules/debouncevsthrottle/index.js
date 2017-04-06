@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-import changeColor from './color/changeColor'
+import changeColor from './color/color'
 import debounce from './debounce'
 import throttle from './throttle'
 import { bindLogReset } from './utils/logger'
