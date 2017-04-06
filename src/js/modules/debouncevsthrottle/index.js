@@ -7,7 +7,6 @@ import { bindLogReset } from './utils/logger'
 
 const init = () => {
 
-  // debounce vs throttle
   $('.js_debounce')
       .on('click', debounce(changeColor, 1000, false))
       .on('dblclick', debounce(changeColor, 1000, true));
