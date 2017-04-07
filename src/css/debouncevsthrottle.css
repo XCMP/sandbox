@@ -8,20 +8,21 @@ div.containers {
 
 div.container {
   display: inline-block;
-  background-color: cornflowerblue;
   cursor: default;
-  width: 20em;
+  width: 47%;
   height: 20em;
-  padding: 1em 0;
-  text-align: center;
   user-select: none;
 }
 
-div.container_log {
+div.container-color {
+  background-color: cornflowerblue;
+  padding: 1em 0;
+  text-align: center;
+}
+
+div.container-log {
   background-color: lightgray;
   float: right;
-  width: 20em;
-  height: 20em;
   padding: 1em;
   overflow: scroll;
 }

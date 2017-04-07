@@ -4,4 +4,10 @@ body {
 
 a {
   display: block;
+  margin-bottom: .5em;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
