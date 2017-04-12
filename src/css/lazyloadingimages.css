@@ -1,0 +1,14 @@
+body {
+  font-family: "American Typewriter";
+}
+
+div.image-container {
+  border: 1px solid black;
+}
+
+div.image {
+  border: 1px solid red;
+  width: 300px;
+  height: 200px;
+  margin: 1em auto auto auto;
+}
