@@ -8,13 +8,11 @@ import { bindLogReset } from './utils/logger'
 const init = () => {
 
   $('.js_debounce')
-      .on('click', debounce(changeColor, 1000, false))
-      .on('dblclick', debounce(changeColor, 1000, true));
+      .on('click', debounce(changeColor, 1000, false));
   bindLogReset($('.js_debounce_log'), 'DEBOUNCE log');
 
   $('.js_throttle')
-      .on('click', throttle(changeColor, 1000))
-      .on('dblclick', throttle(changeColor, 1000));
+      .on('click', throttle(changeColor, 1000));
   bindLogReset($('.js_throttle_log'), 'THROTTLE log');
 
 };
