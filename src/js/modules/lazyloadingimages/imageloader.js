@@ -1,6 +1,4 @@
-import Observer from './observer';
-
-export default function loadimage(changes) {
+export default function loadimage(changes, Observer) {
 
   changes.forEach(change => {
 
@@ -9,7 +7,7 @@ export default function loadimage(changes) {
     const img = document.createElement('img');
     img.src = el.dataset.srcUrl;
     el.appendChild(img);
-    Observer.getObserver().unobserve(el);
+    Observer.unobserve(el);
 
     img.onload = () => img.classList.add('fade-in');
 
