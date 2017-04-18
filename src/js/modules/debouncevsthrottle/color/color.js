@@ -1,5 +1,3 @@
-import $ from 'jquery'
-
 function getRandomColor() {
   let length = 6;
   const chars = '0123456789ABCDEF';
@@ -12,6 +10,6 @@ function getRandomColor() {
   return hex;
 }
 
-export default function changeColor(ev) {
-  $(ev.currentTarget).css('background-color', getRandomColor());
+export default function changeColor(el) {
+  el.target.style = 'background-color: ' + getRandomColor();
 }

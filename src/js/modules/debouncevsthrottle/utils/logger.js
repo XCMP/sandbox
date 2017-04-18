@@ -1,10 +1,8 @@
-import $ from 'jquery'
-
-export function bindLogReset($el, header) {
-  $el.on('click', (el) => $(el.currentTarget).html(header));
+export function bindLogReset(el, header) {
+  el.addEventListener('click', (el) => el.target.innerHTML = header);
 }
 
-export function log($el, text) {
-  $el.html($el.html() + `<br>${text}`);
-  $el.scrollTop($el.prop('scrollHeight'));
+export function log(el, text) {
+  el.innerHTML = el.innerHTML + `<br>${text}`;
+  el.scrollTop = el.offsetHeight;
 }

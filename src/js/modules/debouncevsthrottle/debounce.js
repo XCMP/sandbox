@@ -1,18 +1,17 @@
-import $ from 'jquery'
 import { log } from './utils/logger'
 
 export default function debounce(func, threshold, immediate) {
 
   let timeout;
-  const $log = $('.js_debounce_log');
+  const logEl = document.querySelector('.js_debounce_log');
 
   return function debounced() {
-    log($log, 'clicked');
+    log(logEl, 'clicked');
     const obj = this, args = arguments;
 
     function delayed() {
       if (!immediate) {
-        log($log, 'color changed');
+        log(logEl, 'color changed');
         func.apply(obj, args);
       }
       timeout = null;
@@ -21,7 +20,7 @@ export default function debounce(func, threshold, immediate) {
     if (timeout) {
       clearTimeout(timeout);
     } else if (immediate) {
-      log($log, 'color changed');
+      log(logEl, 'color changed');
       func.apply(obj, args);
     }
 

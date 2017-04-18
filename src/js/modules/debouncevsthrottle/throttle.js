@@ -1,14 +1,13 @@
-import $ from 'jquery'
 import { log } from './utils/logger'
 
 export default function throttle(fn, threshold, scope) {
   threshold || (threshold = 250);
   let last,
       deferTimer;
-  const $log = $('.js_throttle_log');
+  const logEl = document.querySelector('.js_throttle_log');
 
   return function () {
-    log($log, 'clicked');
+    log(logEl, 'clicked');
     let context = scope || this;
 
     let now = +new Date,
@@ -17,12 +16,12 @@ export default function throttle(fn, threshold, scope) {
       clearTimeout(deferTimer);
       deferTimer = setTimeout(function () {
         last = now;
-        log($log, 'color changed');
+        log(logEl, 'color changed');
         fn.apply(context, args);
       }, threshold);
     } else {
       last = now;
-      log($log, 'color changed');
+      log(logEl, 'color changed');
       fn.apply(context, args);
     }
   };
