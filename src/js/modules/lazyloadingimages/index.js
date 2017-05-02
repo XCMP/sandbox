@@ -1,15 +1,12 @@
-import createObserver from './observer';
 import loadimage from './imageloader';
 
 const init = () => {
 
-  const els = document.querySelectorAll('div.image');
-
-  const Observer = createObserver({
-    callback: loadimage,
-    threshold: 1,
+  const Observer = new IntersectionObserver(loadimage, {
+    threshold: 0.75,
   });
 
+  const els = document.querySelectorAll('div.image');
   els.forEach(el => Observer.observe(el));
 
 };
