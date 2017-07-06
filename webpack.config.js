@@ -6,6 +6,7 @@ module.exports = {
     debouncevsthrottle: `./src/js/modules/debouncevsthrottle`,
     typetwice: `./src/js/modules/typetwice`,
     lazyloadingimages: `./src/js/modules/lazyloadingimages`,
+    housecross: `./src/js/modules/housecross`,
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
