@@ -5,6 +5,8 @@ import { initObject } from './initObject'
 
 let i = 0;
 function animate(object, property) {
+  if (i >= lines.length) return;
+
   const data = getData(object);
   initObject(object, data);
   const frame_rate = 0.06; // 60 FPS
