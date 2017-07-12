@@ -2,6 +2,9 @@ import {TRANSISTION_TIME_IN_MS} from './constants'
 
 import { getData } from './dataRetriever'
 import { initObject } from './initObject'
+import { TextSetter } from './textDisplayer'
+
+TextSetter.setEl(document.querySelector('#text'));
 
 let i = 0;
 function animate(object, property) {
@@ -17,6 +20,7 @@ function animate(object, property) {
     var value = delta * frame;
     object.style[property] = value + "px";
     if (value >= data.width) {
+      TextSetter.setText();
       clearInterval(handle);
       animate(lines[++i], 'width');
     }
