@@ -32,3 +32,13 @@ p.text {
   font-size: 30px;
   font-weight: bold;
 }
+
+button {
+  border-radius: .333em;
+  padding: .5em;
+  background-color: white;
+}
+
+button:hover {
+  background-color: lightgray;
+}
