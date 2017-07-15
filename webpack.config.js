@@ -3,14 +3,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
-    debouncevsthrottle: `./src/js/modules/debouncevsthrottle`,
-    typetwice: `./src/js/modules/typetwice`,
-    lazyloadingimages: `./src/js/modules/lazyloadingimages`,
-    housecross: `./src/js/modules/housecross`,
+    debouncevsthrottle: `./src/html/debouncevsthrottle/js`,
+    typetwice: `./src/html/typetwice/js`,
+    lazyloadingimages: `./src/html/lazyloadingimages/js`,
+    housecross: `./src/html/housecross/js`,
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: `js/[name].js`
+    filename: `./sandbox/[name]/js/[name].js`
   },
   module: {
     loaders: [
