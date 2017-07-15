@@ -4,5 +4,5 @@ export function bindLogReset(el, header) {
 
 export function log(el, text) {
   el.innerHTML = el.innerHTML + `<br>${text}`;
-  el.scrollTop = el.offsetHeight;
+  el.scrollTop = el.scrollHeight;
 }
