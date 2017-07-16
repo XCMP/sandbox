@@ -1,30 +1,37 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: {
-    debouncevsthrottle: `./src/html/debouncevsthrottle/js`,
-    typetwice: `./src/html/typetwice/js`,
-    lazyloadingimages: `./src/html/lazyloadingimages/js`,
-    housecross: `./src/html/housecross/js`,
+    debouncevsthrottle: `./src/modules/debouncevsthrottle/js`,
+    typetwice: `./src/modules/typetwice/js`,
+    lazyloadingimages: `./src/modules/lazyloadingimages/js`,
+    housecross: `./src/modules/housecross/js`,
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: `./sandbox/[name]/js/[name].js`
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: [ /\.js$/, /\.css$/],
-        loader: 'babel-loader'
+        test: [ /\.js$/],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015'],
+          }
+        }
       }
     ]
   },
   plugins: [
+    new UglifyJsPlugin({}),
     new CopyWebpackPlugin([
       { from: './src/css', to: './css' },
       {
-        context: 'src/html',
+        context: 'src/modules',
         from: '**/*',
         to: './sandbox'
       },
