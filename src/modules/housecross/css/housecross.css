@@ -42,3 +42,7 @@ button {
 button:hover {
   background-color: lightgray;
 }
+
+.hidden {
+  display: none;
+}

@@ -5,10 +5,14 @@ import { initObject } from './initObject'
 import { TextSetter } from './textDisplayer'
 
 TextSetter.setEl(document.querySelector('#text'));
+const startButton = document.querySelector('#start-button');
 
 let i = 0;
 function animate(object, property) {
-  if (i >= lines.length) return;
+  if (i >= lines.length) {
+    button.classList.remove('hidden');
+    return;
+  }
 
   const data = getData(object);
   initObject(object, data);
