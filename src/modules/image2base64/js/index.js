@@ -26,7 +26,7 @@ const convertCallback = function(data) {
   destinationImg.src = data;
 
   const destinationHtml = document.querySelector('#js_dest_src');
-  destinationHtml.textContent = `<img src='${data}' />`;
+  destinationHtml.textContent = getHtml(destinationImg.cloneNode(false));
 
 };
 convertButton.addEventListener("click", function() {convertImageToBase64Data(source.src, convertCallback)});
