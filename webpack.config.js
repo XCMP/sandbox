@@ -8,6 +8,7 @@ module.exports = {
     typetwice: `./src/modules/typetwice/js`,
     lazyloadingimages: `./src/modules/lazyloadingimages/js`,
     housecross: `./src/modules/housecross/js`,
+    image2base64: `./src/modules/image2base64/js`,
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
