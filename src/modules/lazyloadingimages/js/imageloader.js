@@ -1,4 +1,4 @@
-export default function loadimage(changes, Observer) {
+export function loadimage(changes, Observer) {
 
   changes.forEach(change => {
 

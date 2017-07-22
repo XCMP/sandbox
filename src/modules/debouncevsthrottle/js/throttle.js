@@ -1,6 +1,6 @@
 import { log } from './utils/logger'
 
-export default function throttle(fn, threshold, scope) {
+export function throttle(fn, threshold, scope) {
   threshold || (threshold = 250);
   let last,
       deferTimer;

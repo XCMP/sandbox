@@ -1,4 +1,4 @@
-import copy from './copier'
+import { copy } from './copier'
 
 const init = () => {
 

@@ -1,6 +1,6 @@
 import { log } from './utils/logger'
 
-export default function debounce(func, threshold, immediate) {
+export function debounce(func, threshold, immediate) {
 
   let timeout;
   const logEl = document.querySelector('.js_debounce_log');

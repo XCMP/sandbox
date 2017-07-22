@@ -1,4 +1,4 @@
-export default function copy(options) {
+export function copy(options) {
 
   if (!(options && options.source && options.target)) {
     console.error('ERROR: No source and/or target given.')

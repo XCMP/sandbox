@@ -13,4 +13,4 @@ export const TextSetter =  {
     this.el.innerHTML = this.el.innerHTML + this.TEXT_ARRAY[this.i++];
   }
 
-}
+};

@@ -1,4 +1,4 @@
-import loadimage from './imageloader';
+import { loadimage } from './imageloader';
 
 const init = () => {
 
