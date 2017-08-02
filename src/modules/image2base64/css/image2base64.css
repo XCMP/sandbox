@@ -13,6 +13,9 @@ button {
   word-wrap: break-word;
 }
 
+.thumb {
+  border: 3px solid white;
+}
 .selected {
   border: 3px solid green;
 }
